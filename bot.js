@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+heroku logs --tail
+
 client.on('message', function(msg) {
   let verifLevels = ["None", "Low", "Medium", "(╯°□°）╯︵  ┻━┻", "┻━┻ミヽ(ಠ益ಠ)ノ彡┻━┻"];
   let region = {
