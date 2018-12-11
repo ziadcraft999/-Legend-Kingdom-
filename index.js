@@ -513,7 +513,7 @@ client.on("message", message => {
                   var name = m1.content;
                   m1.delete();
                   m.edit(message.member + ', **:timer:**').then( (m) =>{
-                      m.edit( message.member + ', **عندك كام سنة 🎓**' )
+                      m.edit( message.member + ', **عندك كم سنة 🎓**' )
                       setTimeout(() => {
                         m.delete()
                       }, 10000);
