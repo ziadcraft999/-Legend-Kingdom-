@@ -45,7 +45,7 @@ client.on('ready', () => {
     console.log(`on  ${client.guilds.size} Servers `);
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`-!help | By: zYaDxB52#1468`,"http://twitch.tv/zyod4")
+    client.user.setGame(`-!help | By: zYaDxB52#1468`,"http://twitch.tv/teamcraft")
     client.user.setStatus("dnd")
  });
 
