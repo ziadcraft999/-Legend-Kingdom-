@@ -1595,17 +1595,6 @@ msg.channel.sendEmbed(embed24)
  });
 
 
-client.on('message',function(message) {
-	if(message.author.bot) return;
-	if(message.channel.type === 'dm') return;
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "say")) {
-if(!args) return;
-message.channel.send(`${args}`); 
-  }
-});
-
-
   
 
 
@@ -1638,7 +1627,12 @@ if (message.content.startsWith(adminprefix + 'sett')) {
  message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
 }
 });
-           
+
+
+
+
+
+
 client.on('message', message => {
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'move')) {
@@ -1669,6 +1663,10 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
 } else {
 message.react("❌")
  }}});
+
+
+
+
 
 var prefix = "-!"
 
@@ -1708,6 +1706,8 @@ client.on("message", message => {
    message.delete(); 
   };     
   });
+
+
 
 
 
