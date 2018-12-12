@@ -335,7 +335,7 @@ __~~· • ●«Legend-Kingdom»● • ·~~__ By:<@283880597095710721>
 
 ==================================================================
 
-رابط البوت : https://discordapp.com/oauth2/authorize?client_id=522185535343689739&permissions=0&scope=bot
+رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=522161082786381844&permissions=0&scope=bot
 
 ==================================================================
 
