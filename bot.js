@@ -220,6 +220,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
  
 });
 
+
 client.on('message' , message => {
   var prefix = "-!";
   if(message.author.bot) return;
@@ -230,15 +231,9 @@ client.on('message' , message => {
   }  
  });
 
-  .setColor("#FF0000")
-  .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` TeamCraft'Bot
- .`, 'https://cdn.discordapp.com/avatars/349095859859881984/6a942bc4ff4d014a222dd91e1a6daa48.jpg?size=128')
 
-  message.channel.sendEmbed(embed);
-    }
-});
-               
+     
+
  client.on ("guildMemberAdd", member => {
   
    var role = member.guild.roles.find ("name", "· • ●«Legend-Kingdom»● • ·");
