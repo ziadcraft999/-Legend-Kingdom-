@@ -1809,7 +1809,7 @@ client.on("message", message => {
                   var name = m1.content;
                   m1.delete();
                   m.edit(message.member + ', **:timer:**').then( (m) =>{
-                      m.edit( message.member + ', **عندك كام سنة 🎓**' )
+                      m.edit( message.member + ', **كم عمرك؟ 🎓**' )
                       setTimeout(() => {
                         m.delete()
                       }, 10000);
@@ -1892,7 +1892,7 @@ client.on("message", message => {
   let mySupport = message.guild.roles.find('name',role);
   if(message.content.startsWith("*قبول")) {
     let acRoom = message.guild.channels.find('name', 'القبول-الرفض');
-    if(!acRoom) return message.reply("!!setac من فضلك انشاء روم **القبول-ال��فض** او اكتب الامر");
+    if(!acRoom) return message.reply("!!setac من فضلك انشاء روم **القبول-الرفض** او اكتب الامر");
     if(acRoom) {
     if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
     if(!mention) return message.reply('منشن شخص');
