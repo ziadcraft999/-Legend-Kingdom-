@@ -220,10 +220,15 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
  
 });
 
-client.on('message', message => {
-	if(message.author.bot) return;
-     if (message.content === "-!ping") {
-      const embed = new Discord.RichEmbed()
+client.on('message' , message => {
+  var prefix = "-!";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "ping")) {
+ message.channel.send('Pong...').then((msg) => {
+      msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);
+ })
+  }  
+ });
 
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
