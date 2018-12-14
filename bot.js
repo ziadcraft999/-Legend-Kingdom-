@@ -2124,7 +2124,7 @@ hours = 12;
 
 
 client.on('message', message => {
-    if (message.content.startsWith("Pictrue")) { // الامر
+    if (message.content.startsWith("Picture")) { // الامر
                                     var mentionned = message.mentions.users.first();
                 var mentionavatar;
                   if(mentionned){
