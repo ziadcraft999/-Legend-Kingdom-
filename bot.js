@@ -2141,7 +2141,7 @@ client.on('message', message => {
                   } 
      var LastCode = new Discord.RichEmbed()
      .setColor('RANDOM')
-     .setImage('https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj7o4yF-5_fAhXE34UKHYgzCzwQjRx6BAgBEAU&url=https%3A%2F%2Fvb.almstba.com%2Ft148026.html&psig=AOvVaw1hDr10jrpMMmXiTRUsVm84&ust=1544898850823481') // رابط الصورة
+     .setImage('https://cdn.discordapp.com/attachments/522066976097697792/523207072104579084/unknown.png') // رابط الصورة
       message.channel.sendEmbed(LastCode);
      }
    });
