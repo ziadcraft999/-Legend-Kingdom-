@@ -2140,4 +2140,34 @@ client.on('message', message => {
 
 
 
+
+client.on('message', message => {
+    if (message.content.startsWith("Pictrue")) { // الامر
+                                    var mentionned = message.mentions.users.first();
+                var mentionavatar;
+                  if(mentionned){
+                      var mentionavatar = mentionned;
+                  } else {
+                      var mentionavatar = message.author;
+                      
+                  }
+                  let bot;
+                  if(message.author.bot) {
+                      bot = 'Bot'
+                  } else {
+                      bot = 'User'
+                  } 
+     var LastCode = new Discord.RichEmbed()
+     .setColor('RANDOM')
+     .setImage('https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj7o4yF-5_fAhXE34UKHYgzCzwQjRx6BAgBEAU&url=https%3A%2F%2Fvb.almstba.com%2Ft148026.html&psig=AOvVaw1hDr10jrpMMmXiTRUsVm84&ust=1544898850823481') // رابط الصورة
+      message.channel.sendEmbed(LastCode);
+     }
+   });
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
