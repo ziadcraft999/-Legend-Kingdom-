@@ -2245,6 +2245,16 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
+client.on('message',function(message) {
+  if(!message.channel.guild) return undefined;
+  const swearWords = ["bitch","اركب عليه","مص","fuck","زنوة","منيوك","قحبة","شرموط","زب","كس","طيز","ass"];
+  if (swearWords.some(word => message.content.includes(word)) ) {
+    message.delete()
+    message.reply("**شكلك تبي باند؟**"); 
+  }
+});
+
+
 
 
 client.login(process.env.BOT_TOKEN);
