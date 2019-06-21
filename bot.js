@@ -72,7 +72,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عاليه**");
+  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
 
   message.guild.member(user).kick();
 
@@ -112,7 +112,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عاليه**");
+  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
 
   message.guild.member(user).ban(7, user);
 
@@ -236,7 +236,7 @@ client.on('message' , message => {
 
  client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "· • ●«Humble GANG»● • ·");
+   var role = member.guild.roles.find ("name", "· • ●«Humble-GANG»● • ·");
    member.addRole (role);
   
 })
@@ -303,21 +303,15 @@ __~~· • ●«Humble GANG»● • ·~~__ By:<@283880597095710721>
 
 ❖ -!member ➾ لمعرفة الأعضاء الموجودة في السيرفر
 
-❖ -!avatar عرض صورة الحساب
-
 ❖ -!id ➾ معرفة الايدي
 
-❖ -!ping ➾ لروئية بنق البوت
-
-❖ -!user ➾ لمعرفة تاريخ دخولك الى السيرفر وتاريخ دخولك للدسكورد
-
-❖ -!new ➾ لإنشاء تذكرة
+❖ -!ping ➾ لروئية بينق البوت
 
 ❖ -!bot ➾ معلومات عن البوت
 
 ❖ -!server ➾ معلومات السيرفر 
 
-❖ -!inv ➾ لأضافة البوت في سيرفرك
+❖ inv ➾ لأضافة البوت في سيرفرك
 
 ╔[❖════════════❖]╗
             Music  Commands
@@ -339,7 +333,7 @@ __~~· • ●«Humble GANG»● • ·~~__ By:<@283880597095710721>
 
 ==================================================================
 
-رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=587240375832412160&permissions=8&scope=bot
+رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=522161082786381844&permissions=0&scope=bot
 
 ==================================================================
 
@@ -599,14 +593,14 @@ client.on('message', async msg => {
 
 	} else if (command === `np`) {
 
-		if (!serverQueue) return msg.channel.send('لا توجد اغاني في الانتظار!');
+		if (!serverQueue) return msg.channel.send('There is no Queue!');
 		const embedNP = new Discord.RichEmbed()
 	    .setDescription(`Now playing **${serverQueue.songs[0].title}**`)
         return msg.channel.sendEmbed(embedNP);
         
 	} else if (command === `queue`) {
 		
-		if (!serverQueue) return msg.channel.send('لا توجد اغاني في الانتظار!');
+		if (!serverQueue) return msg.channel.send('There is no Queue!!');
 		let index = 0;
 //	//	//
 		const embedqu = new Discord.RichEmbed()
@@ -673,7 +667,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 		serverQueue.songs.push(song);
 		console.log(serverQueue.songs);
 		if (playlist) return undefined;
-		else return msg.channel.send(`**${song.title}**, لقد اضيفت الى قائمة الانتظار! `);
+		else return msg.channel.send(`**${song.title}**, just added to the queue! `);
 	} 
 	return undefined;
 }
@@ -740,7 +734,7 @@ client.on("message", message => {
 m.delete(1500);
 })
                 if(!message.guild.member(message.author.id).hasPermission("MANAGE_CHANNELS")) return message.channel.send("**ليس لديك صلاحيات . :x:**");
-                        message.channel.send(`**${args}. لقد تم تشغيل الروم هذا للترحيب.**`);
+                        message.channel.send(`**${args}. لقد تم شغل الروم هذا للترحيب.**`);
                     client.on("guildMemberAdd", (member) => {
                             if(member.user.bot) return;
                          var embed = new Discord.RichEmbed()
@@ -766,7 +760,7 @@ client.on("message", message => {
         let args = message.mentions.channels.first();
             if(!args) message.channel.send("** منشن روم . :x:**");
                 if(!message.guild.member(message.author.id).hasPermission("MANAGE_CHANNELS")) return message.channel.send("**ليس لديك صلاحيات . :x:**");
-                        message.channel.send(`**${args}. لقد تم تشغيل الروم هذا للتوديع.**`);
+                        message.channel.send(`**${args}. لقد تم شغل الروم هذا للترحيب.**`);
                     client.on("guildMemberRemove", (member) => {
                             if(member.user.bot) return;
                          var embed = new Discord.RichEmbed()
@@ -1495,7 +1489,7 @@ msg.channel.sendEmbed(embed24)
 
 client.on('message', msg => {
   if(msg.content === 'رابط')
-  msg.reply('https://discord.gg/3aXeS5f')
+  msg.reply('https://discord.gg/3aXeS5f1')
 });
 
 const adminprefix = "-!";
@@ -1629,9 +1623,9 @@ client.on('ready',  () => {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('579829522875154442').roles.find("name", "«Rainbow»").setColor("RANDOM");
+    client.guilds.get('507495471443476481').roles.find("name", "«Rainbow»").setColor("RANDOM");
   };
-  setInterval(lol, 500);
+  setInterval(lol, 2500);
 });
 
 
@@ -1984,7 +1978,7 @@ hours = 12;
                   let giveEmbed = new Discord.RichEmbed()
                   .setDescription(`**${title}** \nReact With 🎉 To Enter! \nTime remaining : ${duration} \n **Created at :** ${hours}:${minutes}:${seconds} ${suffix}`)
                   .setFooter(message.author.username, message.author.avatarURL);
-                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **· • ●«Legend-Kingdom»● • ·** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
+                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **· • ●«Humble GANG»● • ·** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
                        let users = m.reactions.get("🎉").users
@@ -2135,16 +2129,6 @@ channel.guild.owner.send(`<@!${channelremover.id}>
   },Otime)
   });
 
-
-
-client.on('message',function(message) {
-  if(!message.channel.guild) return undefined;
-  const swearWords = ["bitch","اركب عليه","مص","fuck","","","","","","","",""];
-  if (swearWords.some(word => message.content.includes(word)) ) {
-    message.delete()
-    message.reply("**استغفرالله العظيم**"); 
-  }
-});
 
 
 
