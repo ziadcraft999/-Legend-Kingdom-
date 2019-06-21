@@ -35,7 +35,7 @@ client.on('ready', () => {
     console.log(`Users! [ " ${client.users.size} " ]`);
     console.log('')
     console.log('╚[════════════════════════════════════]╝')
-          client.user.setActivity("-!help | By:zYaDxB52#1468",{type: 'STREAMING'});   
+          client.user.setActivity("-!help | By:zYx#1604",{type: 'STREAMING'});   
 });
 
 client.on('ready', () => {
@@ -45,7 +45,7 @@ client.on('ready', () => {
     console.log(`on  ${client.guilds.size} Servers `);
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`-!help | By: zYaDxB52#1468`,"http://twitch.tv/zyod4")
+    client.user.setGame(`-!help | By: zYx#1604`,"http://twitch.tv/zyod4")
     client.user.setStatus("dnd")
  });
 
@@ -72,7 +72,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .kickable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عاليه**");
 
   message.guild.member(user).kick();
 
@@ -112,7 +112,7 @@ client.on('message', message => {
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if(!reason) return message.reply ("**اكتب سبب الطرد**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عاليه**");
 
   message.guild.member(user).ban(7, user);
 
@@ -144,7 +144,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "· • ●«Legend-Kingdom»● • ·"
+          text: "· • ●«Humble GANG»● • ·"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -236,7 +236,7 @@ client.on('message' , message => {
 
  client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "· • ●«Legend-Kingdom»● • ·");
+   var role = member.guild.roles.find ("name", "· • ●«Humble GANG»● • ·");
    member.addRole (role);
   
 })
@@ -275,7 +275,7 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
-__~~· • ●«Legend-Kingdom»● • ·~~__ By:<@283880597095710721>
+__~~· • ●«Humble GANG»● • ·~~__ By:<@283880597095710721>
 
 ╔[❖════════════❖]╗
              Prefix = ' -! '
@@ -303,15 +303,21 @@ __~~· • ●«Legend-Kingdom»● • ·~~__ By:<@283880597095710721>
 
 ❖ -!member ➾ لمعرفة الأعضاء الموجودة في السيرفر
 
+❖ -!avatar عرض صورة الحساب
+
 ❖ -!id ➾ معرفة الايدي
 
-❖ -!ping ➾ لروئية بينق البوت
+❖ -!ping ➾ لروئية بنق البوت
+
+❖ -!user ➾ لمعرفة تاريخ دخولك الى السيرفر وتاريخ دخولك للدسكورد
+
+❖ -!new ➾ لإنشاء تذكرة
 
 ❖ -!bot ➾ معلومات عن البوت
 
 ❖ -!server ➾ معلومات السيرفر 
 
-❖ inv ➾ لأضافة البوت في سيرفرك
+❖ -!inv ➾ لأضافة البوت في سيرفرك
 
 ╔[❖════════════❖]╗
             Music  Commands
@@ -329,11 +335,11 @@ __~~· • ●«Legend-Kingdom»● • ·~~__ By:<@283880597095710721>
 
 ==================================================================
 
-رابط السيرفر: https://discord.gg/w4Nuj8J
+رابط السيرفر: https://discord.gg/3aXeS5f
 
 ==================================================================
 
-رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=522161082786381844&permissions=0&scope=bot
+رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=587240375832412160&permissions=8&scope=bot
 
 ==================================================================
 
@@ -593,14 +599,14 @@ client.on('message', async msg => {
 
 	} else if (command === `np`) {
 
-		if (!serverQueue) return msg.channel.send('There is no Queue!');
+		if (!serverQueue) return msg.channel.send('لا توجد اغاني في الانتظار!');
 		const embedNP = new Discord.RichEmbed()
 	    .setDescription(`Now playing **${serverQueue.songs[0].title}**`)
         return msg.channel.sendEmbed(embedNP);
         
 	} else if (command === `queue`) {
 		
-		if (!serverQueue) return msg.channel.send('There is no Queue!!');
+		if (!serverQueue) return msg.channel.send('لا توجد اغاني في الانتظار!');
 		let index = 0;
 //	//	//
 		const embedqu = new Discord.RichEmbed()
@@ -667,7 +673,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 		serverQueue.songs.push(song);
 		console.log(serverQueue.songs);
 		if (playlist) return undefined;
-		else return msg.channel.send(`**${song.title}**, just added to the queue! `);
+		else return msg.channel.send(`**${song.title}**, لقد اضيفت الى قائمة الانتظار! `);
 	} 
 	return undefined;
 }
@@ -734,7 +740,7 @@ client.on("message", message => {
 m.delete(1500);
 })
                 if(!message.guild.member(message.author.id).hasPermission("MANAGE_CHANNELS")) return message.channel.send("**ليس لديك صلاحيات . :x:**");
-                        message.channel.send(`**${args}. لقد تم شغل الروم هذا للترحيب.**`);
+                        message.channel.send(`**${args}. لقد تم تشغيل الروم هذا للترحيب.**`);
                     client.on("guildMemberAdd", (member) => {
                             if(member.user.bot) return;
                          var embed = new Discord.RichEmbed()
@@ -760,7 +766,7 @@ client.on("message", message => {
         let args = message.mentions.channels.first();
             if(!args) message.channel.send("** منشن روم . :x:**");
                 if(!message.guild.member(message.author.id).hasPermission("MANAGE_CHANNELS")) return message.channel.send("**ليس لديك صلاحيات . :x:**");
-                        message.channel.send(`**${args}. لقد تم شغل الروم هذا للترحيب.**`);
+                        message.channel.send(`**${args}. لقد تم تشغيل الروم هذا للتوديع.**`);
                     client.on("guildMemberRemove", (member) => {
                             if(member.user.bot) return;
                          var embed = new Discord.RichEmbed()
@@ -1489,7 +1495,7 @@ msg.channel.sendEmbed(embed24)
 
 client.on('message', msg => {
   if(msg.content === 'رابط')
-  msg.reply('https://discord.gg/w4Nuj8J')
+  msg.reply('https://discord.gg/3aXeS5f')
 });
 
 const adminprefix = "-!";
@@ -1611,7 +1617,7 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 
 
 client.on('ready',  () => {
-    console.log('تم تشغيل :· • ●«Legend-Kingdom»● • ·  ');
+    console.log('تم تشغيل :· • ●«Humble GANG»● • ·  ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -1623,9 +1629,9 @@ client.on('ready',  () => {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('507495471443476481').roles.find("name", "«Rainbow»").setColor("RANDOM");
+    client.guilds.get('579829522875154442').roles.find("name", "«Rainbow»").setColor("RANDOM");
   };
-  setInterval(lol, 2500);
+  setInterval(lol, 500);
 });
 
 
@@ -1636,7 +1642,7 @@ client.on("ready", () => {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '☻-welcome');
+    let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -2133,10 +2139,10 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 client.on('message',function(message) {
   if(!message.channel.guild) return undefined;
-  const swearWords = ["bitch","اركب عليه","مص","fuck","زنوة","منيوك","قحبة","شرموط","زب","كس","طيز","ass"];
+  const swearWords = ["bitch","اركب عليه","مص","fuck","","","","","","","",""];
   if (swearWords.some(word => message.content.includes(word)) ) {
     message.delete()
-    message.reply("**شكلك تبي باند؟**"); 
+    message.reply("**استغفرالله العظيم**"); 
   }
 });
 
