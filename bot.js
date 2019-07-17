@@ -35,7 +35,7 @@ client.on('ready', () => {
     console.log(`Users! [ " ${client.users.size} " ]`);
     console.log('')
     console.log('╚[════════════════════════════════════]╝')
-          client.user.setActivity("-!help | By:zYx#1604",{type: 'STREAMING'});   
+          client.user.setActivity("-!help | By:zYx#3496",{type: 'dnd'});   
 });
 
 client.on('ready', () => {
@@ -45,7 +45,7 @@ client.on('ready', () => {
     console.log(`on  ${client.guilds.size} Servers `);
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`-!help | By: zYx#1604`,"http://twitch.tv/zyod4")
+    client.user.setGame(`-!help | By: zYx#3496`,"http://twitch.tv/zyod4")
     client.user.setStatus("dnd")
  });
 
@@ -144,7 +144,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "· • ●«Humble GANG»● • ·"
+          text: "Opera System"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -236,7 +236,7 @@ client.on('message' , message => {
 
  client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "· • ●«Humble-GANG»● • ·");
+   var role = member.guild.roles.find ("name", "Opera System");
    member.addRole (role);
   
 })
@@ -275,7 +275,7 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
-__~~· • ●«Humble GANG»● • ·~~__ By:<@283880597095710721>
+__~~Opera System~~__ By:<@283880597095710721>
 
 ╔[❖════════════❖]╗
              Prefix = ' -! '
@@ -1489,7 +1489,7 @@ msg.channel.sendEmbed(embed24)
 
 client.on('message', msg => {
   if(msg.content === 'رابط')
-  msg.reply('https://discord.gg/3aXeS5f1')
+  msg.reply('https://discord.gg/QY99Dr')
 });
 
 const adminprefix = "-!";
@@ -1611,7 +1611,7 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 
 
 client.on('ready',  () => {
-    console.log('تم تشغيل :· • ●«Humble GANG»● • ·  ');
+    console.log('تم تشغيل :Opera System');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -1978,7 +1978,7 @@ hours = 12;
                   let giveEmbed = new Discord.RichEmbed()
                   .setDescription(`**${title}** \nReact With 🎉 To Enter! \nTime remaining : ${duration} \n **Created at :** ${hours}:${minutes}:${seconds} ${suffix}`)
                   .setFooter(message.author.username, message.author.avatarURL);
-                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **· • ●«Humble GANG»● • ·** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
+                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **Opera System** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
                        let users = m.reactions.get("🎉").users
